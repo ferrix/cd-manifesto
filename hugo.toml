@@ -1,0 +1,81 @@
+baseURL                = 'https://minimumcd.org/'
+defaultContentLanguage = "en"
+languageCode           = "en-US"
+title                  = 'MinimumCD.org'
+
+theme = "docport"
+
+pygmentsCodeFences = true
+pygmentsStyle      = "monokai"
+
+defaultContentLanguageInSubdir       = false
+enableMissingTranslationPlaceholders = false
+
+googleanalytics = "G-KVLFMQXEF1"
+
+disableKinds = [
+  "RSS",
+  "taxonomy"
+]
+
+# Keep this as is
+[outputs]
+  home = [
+    "HTML",
+    "JSON",
+    "RSS"
+  ]
+
+# Site params
+[params]
+  color_main          = "#477bbf"
+  color_second        = "#b30000"
+  disableNavChevron   = false     # set true to hide next/prev chevron, default is false
+  disableSearch       = false     # default is false
+  menushortcutsnewtab = false     # set true to open shortcuts links to a new tab/window
+  ordersectionsby     = "weight"  # ordersectionsby = "title"
+
+  custom_js = [
+    "https://buttons.github.io/buttons.js"
+  ]
+  editURL = "https://github.com/Minimum-CD/cd-manifesto/blob/master/content/"
+  enableGitInfo = true
+  github_repo = 'Minimum-CD/cd-manifesto'
+  logo = '/images/minimumCD-logo-hex.png'
+
+[mediaTypes]
+  [mediaTypes."application/netlifyconfig"]
+    suffixes = [
+      "yml"
+    ]
+
+[outputFormats]
+  [outputFormats.netlifyyaml]
+    isHTML         = false
+    isPlainText    = true
+    mediaType      = "application/netlifyconfig"
+    notAlternative = true
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+# Code highlight configuration
+[markup.highlight]
+  codeFences         = true
+  guessSyntax        = true
+  hl_Lines           = ""
+  lineNoStart        = 1
+  lineNos            = false
+  lineNumbersInTable = true
+  noClasses          = true
+  style              = "monokai"
+  tabWidth           = 2
+
+[[menu.shortcuts]]
+  identifier = "ds"
+  name       = "Github"
+  url        = "https://github.com/Minimum-CD/cd-manifesto"
+  weight     = 10
+
+[create-footer-md]
+  other = "Licensed MIT"

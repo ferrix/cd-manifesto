@@ -1,84 +1,45 @@
-# Continuous Delivery Manifesto
+# Minimum Viable Continuous Delivery
 
-> "Continuous delivery improves both delivery performance and quality, and also helps improve culture and reduce burnout and deployment pain."
-     	
--- Accelerate
+This is a community project to define the minimum set of practices that give the expected improvements to outcomes, quality of life, and organizational structure that come with continuous delivery.
 
-We believe that a minimal definition of continuous delivery (CD)  is required to improve the flow of delivery. While our
-contexts may be different, there are universal practices. By defining them we can:
+The website for this project, contained in this repo, is currently hosted at [MinimumCD.org](https://minimumcd.org/minimumcd/)
 
-- Introduce new practitioners in a consistent way
-- Discuss engineering practices that comprise CD
-- Help each other improve current capabilities 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d9c2de6c-4010-4e9c-b03a-9b303cfbfdf0/deploy-status)](https://app.netlify.com/sites/minimumcd/deploys)
 
-Only by implementing core practices do we begin to see the benefits of continuous delivery.
+## Running Locally
 
-The practices below are the minimum, a starting point. Continuous improvement of the speed, quality, and safety of the delivery pipeline is the expected outcome.
+This site uses NPM scripts to automate style checks.
 
-## Continuous Delivery
+`npm ci` will install all pre-commit hooks to verify style errors and test before allowing commits.
 
-CD is the engineering discipline of delivering all changes in a standard way safely. It covers a broad spectrum of activities depending on what is being delivered. However, there are behaviors and abilities that must be met in every context to qualify as "continuous delivery"
+`npm test` will validate formatting. This will also run automatically as a pre-commit hook.
 
-The minimum activities required for CD are:
+`npm start` will run the site locally.
 
-- [Continuous integration](#continuous-integration)
-- One path to production
-- [Always meets the organization's definition of deployable](https://www.youtube.com/watch?v=bHKHdp4H-8w) 
-- Immutable artifact. No human changes after commit.
-- All feature work stops when the pipeline is red 
-- Production-like test environment
-- Rollback on-demand
-- Configuration deploys with artifact
+`npm run build` will create the static site if you need to see the resulting structure.
 
-## Continuous Integration
+## Contributing
 
-CI is the activity of very frequently integrating work to the trunk of version control and verifying that the work is, to the best of our knowledge, releasable.
+Please see the [contribution](CONTRIBUTING.md) page for adding signatures or suggesting improvements.
 
-The minimum activities required for CI are:
+If you'd like to submit a translation, please see the suggestions [here](TRANSLATING.md).
 
-- [Trunk-based development](#trunk-based-development)
-- Work integrates to the trunk at a minimum daily
-- Work is tested before merge to trunk
-- All feature work stops when the build is red 
-- New work does not break delivered work
-- Work is tested with other work automatically on commit
+## Starchart
 
-## Trunk-based Development
+## Stargazers over time
 
-Trunk-based development is the safest branching pattern. It prevents lost work, the risk of corruption that comes from merge conflict resolution, and also reduces movement waste that increases batch size.
+[![Stargazers over time](https://starchart.cc/Minimum-CD/cd-manifesto.svg)](https://starchart.cc/Minimum-CD/cd-manifesto)
 
-- The minimum activities required for TBD are:
-  - All changes integrate into the trunk
-  - If branches from the trunk are used:
-    - They originate from the trunk
-    - The re-integrate to the trunk
-    - They are short-lived and removed after the merge
+## Stickers
 
-## Signatories
+Want to print stickers? You can find our logo images [here](https://github.com/Minimum-CD/cd-manifesto/blob/master/static/images)
 
-| Name          | Contact                                    |
-|---------------|--------------------------------------------|
-| Bryan Finster | https://www.linkedin.com/in/bryan-finster/ |
-| Joe Arrowood  | https://www.linkedin.com/in/joearrowood/   |
-| Jerreck McWilliams | https://www.linkedin.com/in/jerreck/ |
-| Patrick S. Kelso | https://www.linkedin.com/in/patrickkelso/ |
-| Istvan Bathazi| https://www.linkedin.com/in/ibathazi/      |
+<img src="static/images/minimumCD-logo-hex.png" alt="MinCD Hex" height="150px">
 
-## Beyond the Minimums
+<img src="static/images/minimumCD-Tagline.png" alt="MinCD Hex" height="150px">
 
-Resources for improving the delivery pipelines to move from "basic" to "elite"
+## Tool info
 
-[Implementing Continuous Delivery](https://cloud.google.com/architecture/devops/devops-tech-continuous-delivery#implementing_continuous_delivery)
+Built with [Hugo](https://gohugo.io/)
 
-[Continuous Delivery Pipelines](https://leanpub.com/cd-pipelines) by Dave Farley
-
-[Engineering the Digital Transformation](https://garygruver.com/engineering-digital-transformation.php) by Gary Gruver
-
-[Continuous Delivery](https://continuousdelivery.com/) by Dave Farley and Jez Humble
-
-[Continuous Delivery YouTube Channel](https://www.youtube.com/c/ContinuousDelivery) by Dave Farley
-
-## Acknowledgements
-
-This is the outcome of several meetings at the bar at the DevOps Enterprise Summit in October, 2021. It is our consensus
-of the bare minimum implementation of CD.
+[Theme](https://docport.netlify.app/docport-theme/) documentation

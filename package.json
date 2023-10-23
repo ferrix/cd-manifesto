@@ -1,0 +1,45 @@
+{
+  "name": "minimumcd",
+  "version": "1.0.0",
+  "description": "Minimum Viable CD",
+  "keywords": [
+    "ci",
+    "cd",
+    "ci/cd",
+    "mvp",
+    "agile",
+    "continuous",
+    "integration",
+    "delivery",
+    "trunk-based",
+    "trunk"
+  ],
+  "homepage": "https://minimumcd.org/minimumcd/",
+  "bugs": {
+    "url": "https://github.com/Minimum-CD/cd-manifesto/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Minimum-CD/cd-manifesto.git"
+  },
+  "license": "CC-BY-4.0",
+  "author": "MinimumCD.org",
+  "main": "hugo serve",
+  "scripts": {
+    "build": "hugo",
+    "link-check": "npm run build && linkinator ./public --config .linkinator.config.json ",
+    "lint": "markdownlint ./content/**/*.md",
+    "lint:fix": "markdownlint -f ./content/**/*.md",
+    "prepare": "husky install",
+    "start": "hugo serve",
+    "test": "rm -rf public && npm run lint && npm run link-check"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "linkinator": "^5.0.1",
+    "markdownlint-cli": "^0.35.0"
+  },
+  "engines": {
+    "node": "^16 || ^18"
+  }
+}
